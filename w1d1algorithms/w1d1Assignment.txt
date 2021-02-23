@@ -1,0 +1,42 @@
+Assignments
+• Read contents from referenced links.
+• What happens when an assignment is performed without using let or const keywords in strict
+mode?
+ Answer 
+The strict mode throws a message that shows a reference error or throws a message that "Variable 'x' is not defined'. 
+This is because the modern use of js follows a strict syntactic rules and variable declaration as the word 'Strict' is informs 
+the compiler that it is ES6 or above. 
+
+• List 5 reserved keywords in JavaScript.
+
+Answer: break, switch, case, const, default 
+
+• How is a computer program similar/ different than an algorithm.
+A computer program vs an algorithm 
+Similarty 				Difference 
+-Step by step instruction		- Algirithms could exist beyond the realm of computer programming 
+ Take Data as an input 		    - A computer prgram is interprated in a certain environment [The criteria to be a computer program is its runnablity in a machine]
+- Follow excution process 	
+- There is an output 
+
+• Write at least two algorithms you perform on your daily life, with at least one algorithm
+that can be converted to computer program.
+
+Response: Two algorithms for routines I do daily 
+#1 My day from 6 am to 10/9am
+-Step 1: Wake up at 5:30AM
+-Step 2: Make Daily prayer/meditaion for 30 minutes
+-Step 3: Make daily reading for 40 minutes
+-Step 4: Daily Workout for 30 minutes  
+-Step 5: Get dressed 
+-Step 6: eat breakfast 30min
+-Step 6: Sit to Study or class 
+
+#2.The Algorithm of my sunday classes 
+- Wake up at 6 
+-Take a routine prayer and meditation 1 hour 
+-Prepare for class for one hour 
+-Do stretch workout for 30 minutes
+-Read News for one hour 
+-Get online for class with coffee 
+-Teach from 10-11:30.
