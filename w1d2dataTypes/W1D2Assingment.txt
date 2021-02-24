@@ -34,6 +34,6 @@ let age2 = 8;
 (age1>4 && age2<7) holds true as long as both conditions are true otherwise false. 
 5. Which of the following statements is true?
 a. In computer programming, a statement can be part of an expression.
-     -Statement can return a result, it can be part of an expression. This is a true statement 
+     -Statement can return a result, it cannot be part of an expression. This is a false statement 
 b. In computer programming, an expression can be a part of a statement.
-- Statements may contain expressions
+- Statements may contain expressions so that is a True statement 
