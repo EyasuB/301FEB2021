@@ -1,9 +1,9 @@
 What will be the output of running following code?
 1. What will be the output of running following code?
 console.log(Number(null));
-Answer: Undefined
+Answer: 0
 console.log(Number(undefined));
-Answer: Undefined 
+Answer: NaN 
 console.log(Boolean("0"));
 Answer: True 
 console.log(Boolean(" "));
