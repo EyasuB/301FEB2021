@@ -44,7 +44,7 @@ value of input radius.
 //Input radius of a circle, PI
 //Output: Area of a circle 
 
-function areaOfCircle(radius = prompt("Enter Radius: ")) {
+function areaOfCircle(radius = +prompt("Enter Radius: ")) {
     let area = 0;
     return area = Math.pow(radius,2) * Math.PI;
 }
@@ -56,7 +56,7 @@ of the areaOfCircle function.
 */
 let calculatedArea = areaOfCircle();
 console.log(calculatedArea);
-function volumeOfCylinder(h = prompt("Enter the height of the cylnder: ")) {
+function volumeOfCylinder(h = +prompt("Enter the height of the cylnder: ")) {
     //let h = 0;
     let volume;
     return volume = h * calculatedArea; 
@@ -78,13 +78,13 @@ figure below. Write code to call and test your function.
 //rooftopvolume = triangle Area* depth
 //triangleArea = sqrt((s-b)(s-b)(s-c)
 //s=(a+b+c)/2;
-let a = prompt("enter a: ");
-let b =prompt("enter b: ");
-let c= prompt("enter c: ");
+let a = +prompt("enter a: ");
+let b = +prompt("enter b: ");
+let c= +prompt("enter c: ");
 function triangleArea() {
     let s = (a + b + c) / 2;
    let areaRoof = 0;
-    areaRoof =Math.sqrt(s*(s-a)*(s-b)*(s-c));
+    areaRoof = Math.sqrt(s*(s-a)*(s-b)*(s-c));
     return  areaRoof;
 
     
@@ -94,15 +94,15 @@ console.log(triangleArea(a,b,c));
 
 // now the triangle area 
 let areaOfTrinagleCalculated = triangleArea();// to use it as an argument
-let depth =prompt("Enter the depth ")
+let depth = +prompt("Enter the depth ")
 function rooftopvolume() {
    
     return depth * areaOfTrinagleCalculated;
 }
 console.log(rooftopvolume(depth,areaOfTrinagleCalculated));
 // Volume of living 
-let width = prompt("Enter the Width: ");
-let height = prompt("Enter the height: ");
+let width = +prompt("Enter the Width: ");
+let height = +prompt("Enter the height: ");
 function volumeOfLiving() {
     return width * height * depth;
 }
