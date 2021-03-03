@@ -73,8 +73,8 @@ function that does the actual operation, second and third are the operands.
 const compute=(add, a, b)=>{
     return add(a, b);
 }
-compute(add,a,b);
-add = (a,b) => {
+
+let add = (a,b) => {
    return a + b;
 }
-add();
+console.log(compute(add,2,2));

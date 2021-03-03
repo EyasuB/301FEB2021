@@ -1,0 +1,35 @@
+1. What are alternatives to default parameters?
+
+"Sometimes it makes sense to set default values for parameters not in the function declaration, but at a later stage, during its execution.
+
+To check for an omitted parameter, we can compare it with undefined:" https://javascript.info/function-basics#alternative-default-parameters
+
+or Or we could use the || operator:
+Modern JavaScript engines support the nullish coalescing operator ??, it’s better when falsy values, such as 0, are considered regular:
+
+2. What are things you should consider while naming a function?
+ Functions are actions so Function Names should reflect that like "addMessage", "runTime" ...
+"Functions are actions. So their name is usually a verb. It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does.
+
+It is a widespread practice to start a function with a verbal prefix which vaguely describes the action. There must be an agreement within the team on the meaning of the prefixes."
+3. Do functions need to be always commented? Write your understanding based on
+the reading.
+"Functions should be short and do exactly one thing. If that thing is big, maybe it’s worth it to split the function into a few smaller functions. Sometimes following this rule may not be that easy, but it’s definitely a good thing.
+
+A separate function is not only easier to test and debug – its very existence is a great comment!"
+
+4. When should you choose Function Declaration versus Function Expression and why?
+
+As a rule of thumb, when we need to declare a function, the first to consider is Function Declaration syntax. It gives more freedom in how to organize our code, because we can call such functions before they are declared.
+
+That’s also better for readability, as it’s easier to look up function f(…) {…} in the code than let f = function(…) {…};. Function Declarations are more “eye-catching”.
+
+…But if a Function Declaration does not suit us for some reason, or we need a conditional declaration (we’ve just seen an example), then Function Expression should be used.
+
+
+5. Functions are values in JavaScript. They can be assigned, copied, or declared in any
+place of the code. Is this a true or a false statement? Support your answer with
+examples.
+That is True. 
+Everything in Js is object and functions could also be seen as objects with values. They can be assigned, copied or declared in any place of the code. 
+This holds true within the bounds of scope. 
