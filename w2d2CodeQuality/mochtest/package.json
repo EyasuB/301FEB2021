@@ -1,0 +1,11 @@
+{
+  "name": "mochtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "functions.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Eyasu",
+  "license": "ISC"
+}
