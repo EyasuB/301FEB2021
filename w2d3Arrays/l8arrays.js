@@ -3,7 +3,8 @@ exports.addends = addends;
 exports.getMiddle = getMiddle;
 exports.rotateRight = rotateRight;
 exports.rotateLeft = rotateLeft;
-
+//exports.fmrString = fmrString;
+exports.rotateNRight = rotateNRight;
 /*
 Write a function addend(arr) that accepts an array of numbers as parameters and returns the
 sum of firs and last elements of the array.
@@ -93,12 +94,52 @@ function rotateRight(arr) {
     return arr2
 }
 /*
+
 Modify rotate functions to rotate array by n times where, n is the second parameter passed in
 the function (optional).
-
 */
+/**
+ * 
+ * @param {Array} array 
+ * @param {Number} stepsToShift 
+ * @returns {Array} this is a new array shifted n steps to the right 
+ */
+function rotateNRight(array, stepsToShift) {
+
+    for (var i = 0; i < stepsToShift; i++) {
+        array.unshift(array.pop());
+    }
+
+    return array;
+}
+
+
+
 /* 6.    Write a JavaScript function that takes a string of  numbers as comma separated values, e.g, “32, 105,  -22”,  and stores it into an array, e.g., [32, 105, -22] and do following operations
 a.    Filters out negative values
 b.    Maps the filtered elements to sum of its digits--i.e., 32 becomes 5 and 105 becomes 6
 c.    Reduce to get sum of all the elements and returns this value--i.e, add the 5 and 6 to get 11
+*/
+//let str = '1,2,4';
+/**
+ * 
+ * @param {String} str 
+ * @returns {Array} arr3
+ */
+/*
+function fmrString(str) {
+    
+    let arr3 = [];
+    str = str.split(',');
+    console.log(str);
+    for (let i = 0; i < str.length; i++) {
+        if (parseFloat(str[i]) >= 0) {
+            arr3.push(parseFloat(str[i]));
+        }
+    }
+    
+    return console.log(arr3);  
+    
+}
+fmrString();
 */
