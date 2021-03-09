@@ -1,0 +1,19 @@
+Write the code, one line for each action:
+a. Create an empty object car 
+let car = {};
+b. Add the property name make with value Toyota
+car.make = "Toyota";
+c. Add the property name model with value Camry
+car.mode = "Camry";
+d. Print the object
+console.log(car);
+e. Without modifying the code structure of the object, change the value of the model to
+RAV4.
+car.model = "RAV4";
+f. Print the object
+console.log(car);
+g. Without modifying the code structure of the object, Remove property make from the
+object
+delete(Car.make)
+h. Print the object
+console.log(Car)
