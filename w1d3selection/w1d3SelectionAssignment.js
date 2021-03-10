@@ -10,18 +10,18 @@ hot sandals
 rain galoshes
 snow boots
 */
-// let weather = prompt("Enter the day's weather please ");
-// if (weather === "hot" || weather ==="Hot") {
-//     console.log("The appropriate footwear are sandals.");
+let weather = prompt("Enter the day's weather please ");
+if (weather === "hot" || weather ==="Hot") {
+    console.log("The appropriate footwear are sandals.");
 
-// } else if (weather === "rain" || weather==="Rain") {
-//     console.log("The appropriate foot wear are galoshes");
-// } else if (weather === "snow" || weather==="Snow") {
-//      console.log("The appropriate foot wear are boots")
-// } else {
-//     console.log("The appropriate footwear are sneakers");
+} else if (weather === "rain" || weather==="Rain") {
+    console.log("The appropriate foot wear are galoshes");
+} else if (weather === "snow" || weather==="Snow") {
+     console.log("The appropriate foot wear are boots")
+} else {
+    console.log("The appropriate footwear are sneakers");
 
-// }
+}
 /*
 Write a program that reads from the keyboard a student's name and number of completed
 credits and then outputs the student's name and label on following rules:
@@ -31,19 +31,19 @@ c. "Junior" if 60<=credits<90
 d. "Senior" if credits>90
 
 */
-// const name = prompt("Enter name please: ");
-// const credits = prompt("Enter Credits please");
-// if(credits<=29) {
-//     console.log("Freshman");
+const name = prompt("Enter name please: ");
+const credits = prompt("Enter Credits please");
+if(credits<=29) {
+    console.log("Freshman");
 
-// } else if (credits < 60) {
-//     console.log("Sophomore");
+} else if (credits < 60) {
+    console.log("Sophomore");
 
-// } else if (credits < 90) {
-//     console.log("Junior");
-// } else {
-//     console.log("senior");
-// }
+} else if (credits < 90) {
+    console.log("Junior");
+} else {
+    console.log("senior");
+}
 /*
 Write a program that calculates down payment for a home loan based on following rules.
 Cost of House Down Payment
@@ -53,17 +53,17 @@ $100K to less than 200K $2000 + 15% of (cost - $100K)
 $200K and above $5000 + 10% of (cost - $200K)
 
 */
-// const costOfHouse = prompt("What is the cost of the House? ");
-// let downPaymewnt;
-// if (costOfHouse < 50000) {
-//     console.log(`The down Payment will be ${costOfHouse*0.05} dollars.` )
-// } else if (costOfHouse < 100000) {
-//     console.log(`The downpayment will be ${1000 + 0.1*(costOfHouse-50000)} dollars` )
-// } else if (costOfHouse < 200000) {
-//      console.log(`The downpayment will be ${2000 + 0.15*(costOfHouse-100000)} dollars` )
-// } else {
-//      console.log(`The downpayment will be ${5000 + 0.1*(constOfHouse-200000)} dollars` )
-// }
+const costOfHouse = prompt("What is the cost of the House? ");
+let downPaymewnt;
+if (costOfHouse < 50000) {
+    console.log(`The down Payment will be ${costOfHouse*0.05} dollars.` )
+} else if (costOfHouse < 100000) {
+    console.log(`The downpayment will be ${1000 + 0.1*(costOfHouse-50000)} dollars` )
+} else if (costOfHouse < 200000) {
+     console.log(`The downpayment will be ${2000 + 0.15*(costOfHouse-100000)} dollars` )
+} else {
+     console.log(`The downpayment will be ${5000 + 0.1*(costOfHouse-200000)} dollars` )
+}
 
 /*
 A university library that loans book to students, faculty, and the public has a written policy that
@@ -134,9 +134,32 @@ Input                   Process                             Output
 Child's age             -The combination of season and age  -Time to go to bed
  Seasons                    as a condition
 */
-const age = Number(prompt("How old is the child");
+const age = Number(prompt("How old is the child "));
+const season = prompt("Enter the season: ");
 
+if (age <= 5) {
+    if (season === "summer" || season === "fall") {
+        console.log("Sleep at 8:30");
 
+    } else if (season === "winter" || season == "spring") {
+        console.log("sleep at 8:00PM");
+    }
+    
+} else if (age < 12) {
+    if ((season === "winter" || season === "fall")|| season==="spring") {
+        console.log("Sleep at 8:30");
+
+    } else if (season === "summer" ) {
+        console.log("sleep at 9:30PM");
+    }
+} else {
+    if ((season === "winter" || season === "fall")|| season==="spring") {
+        console.log("Sleep at 9:30");
+
+    } else if (season === "summer" ) {
+        console.log("sleep at 10:30PM");
+    }
+   }
 
 
 
@@ -159,3 +182,5 @@ switch (foo) {
  default:
  console.log('default');
 }
+//Solution Output  will be 0 ,1 
+//If we change case 0 to '0' the output will be default

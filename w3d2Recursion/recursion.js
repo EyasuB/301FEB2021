@@ -15,16 +15,17 @@ function power(number, exponent) {
         return number;
     }
     else if (exponent < 0) {
-        return 1 / (number * power(number, exponent - 1));
+        return 1 / (number * power(number, -exponent ));
     }
     else return number * power(number, exponent - 1);
 }
-console.log(power(10, 2));
+console.log(power(6, -5));
 
 /*
 • count the digits of a given number
 
 */
+/*This is the iterative and 
 function countDigits(number) {
     let digitCounter = 0;
 
@@ -35,9 +36,17 @@ function countDigits(number) {
     return digitCounter;
 
 }
+
 //console.log(numDigits(23489))
-/*
-• reverse a given string.
+*/
+function countDigits(number,i) {
+    if (number / 10 != 0)
+        return i + countDigits(number / 10, i);
+    else if (number >= 0) return 1;
+    else return 0;
+}
+countDigits();
+/* reverse a given string.
 This function is the iteration method of the function 
 function reverse(str){
   let temp ='';

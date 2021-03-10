@@ -3,8 +3,11 @@ exports.addends = addends;
 exports.getMiddle = getMiddle;
 exports.rotateRight = rotateRight;
 exports.rotateLeft = rotateLeft;
-//exports.fmrString = fmrString;
+exports.fmrString = fmrString;
 exports.rotateNRight = rotateNRight;
+exports.matrixAddition = matrixAddition;
+exports.filterRange = filterRange;
+exports.filterPalindromes = filterPalindromes;
 /*
 Write a function addend(arr) that accepts an array of numbers as parameters and returns the
 sum of firs and last elements of the array.
@@ -102,13 +105,15 @@ the function (optional).
  * 
  * @param {Array} array 
  * @param {Number} stepsToShift 
- * @returns {Array} this is a new array shifted n steps to the right 
+ * @returns {Array} array2 this is a new array shifted n steps to the right 
  */
 function rotateNRight(array, stepsToShift) {
 
-    for (var i = 0; i < stepsToShift; i++) {
+    for (let i = 0; i < stepsToShift; i++) {
         array.unshift(array.pop());
+
     }
+
 
     return array;
 }
@@ -122,24 +127,99 @@ c.    Reduce to get sum of all the elements and returns this value--i.e, add the
 */
 //let str = '1,2,4';
 /**
- * 
  * @param {String} str 
  * @returns {Array} arr3
+* @returns {Number } filtered is a number 
  */
-/*
+
 function fmrString(str) {
-    
-    let arr3 = [];
-    str = str.split(',');
-    console.log(str);
-    for (let i = 0; i < str.length; i++) {
-        if (parseFloat(str[i]) >= 0) {
-            arr3.push(parseFloat(str[i]));
+
+    let myString = "32, 105,  -22";
+
+let newArray = myString.split(',').map(Number); // one of the coolest mewthods that I learned 
+console.log(newArray);
+let filtered = newArray.filter(function (value, index, arr) {
+    return value >= 0
+});
+    console.log(filtered.map(Number).reduce(function (a, b) {
+        return a + b;
+    }, 0));
+// let reducer = (accumulator, currentValue) => accumulator + currentValue;
+// console.log(filtered.reduce(reducer));
+
+}
+
+
+
+
+
+
+
+// Levi's solutions and Please look to it to solve using memory saving method. 
+/* 7.	Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array. 
+
+
+
+*/
+function filterRange(arr, a, b) {
+    let filteredarr = [];
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] >= a)
+            if (arr[i] <= b) {
+                filteredarr.push(arr[i]);
+            }
+    }
+    return filteredarr; 
+}
+
+/* 8.	Write a function that takes an array of strings and returns array of palindrome strings only. 
+Input: An array 
+Output: palindrome string 
+Process: What is palindrome string? A string that reads the same both forward and backward Eg. 'dad',' aibohphobia' 
+
+
+*/
+/**
+ * 
+ * @param {Array} arrayPro 
+ * @returns {Array} arr2 Returns an array of palindrome strings only 
+ */
+function filterPalindromes(arrayPro) {
+    //let arrayPro = ['dad', 'bad', 'sas', 'money', 'lol', 'saas',];
+    let arr2 = [];
+    for (let i = 0; i < arrayPro.length; i++) {
+        if (arrayPro[i] === arrayPro[i].split("").reverse().join("")) {
+            arr2.push(arrayPro[i]);
         }
     }
-    
-    return console.log(arr3);  
-    
+    return arr2;
 }
-fmrString();
+
+
+/*
+9.  /* Do matrix addition and print result on matrix format for following:
+[[0,1,2],[9,8,7]] and [[6,5,4], [3,4,5]]  should be [ [ 6, 6, 6 ], [ 12, 12, 12 ] ]
 */
+
+/**
+ * 
+ * @param {Array} arr1 
+ * @param {Array} arr2 
+ * @returns {Array}
+ */
+function matrixAddition(arr1, arr2) {
+    let arrNew = []
+    for (let i = 0; i < arr1.length; i++) {
+        let arrSmallNew = [];
+
+        for (let j = 0; j < arr1[i].length; j++) {
+            let sum = 0;
+            console.log(arr1[i][j], arr2[i][j]);
+            sum = arr1[i][j] + arr2[i][j];
+            arrSmallNew.push(sum);
+        }
+        arrNew.push(arrSmallNew)
+
+    }
+    return arrNew;
+}

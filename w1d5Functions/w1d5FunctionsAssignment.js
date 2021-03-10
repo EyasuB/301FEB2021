@@ -78,10 +78,10 @@ figure below. Write code to call and test your function.
 //rooftopvolume = triangle Area* depth
 //triangleArea = sqrt((s-b)(s-b)(s-c)
 //s=(a+b+c)/2;
-let a = +prompt("enter a: ");
-let b = +prompt("enter b: ");
-let c= +prompt("enter c: ");
-function triangleArea() {
+// let a = +prompt("enter a: ");
+// let b = +prompt("enter b: ");
+// let c= +prompt("enter c: ");
+function triangleArea(a = +prompt("enter a: "), b = +prompt("enter b: "), c = +prompt("enter c: ")) {
     let s = (a + b + c) / 2;
    let areaRoof = 0;
     areaRoof = Math.sqrt(s*(s-a)*(s-b)*(s-c));
@@ -89,7 +89,6 @@ function triangleArea() {
 
     
 }
-console.log(triangleArea(a,b,c));
 
 
 // now the triangle area 
@@ -99,14 +98,14 @@ function rooftopvolume() {
    
     return depth * areaOfTrinagleCalculated;
 }
-console.log(rooftopvolume(depth,areaOfTrinagleCalculated));
+
 // Volume of living 
 let width = +prompt("Enter the Width: ");
 let height = +prompt("Enter the height: ");
 function volumeOfLiving() {
     return width * height * depth;
 }
-console.log(volumeOfLiving(height, depth, width));
+
 
 /// Finally the volume of the house is 
 let volumeOfRoof = rooftopvolume(depth,areaOfTrinagleCalculated);
@@ -115,5 +114,10 @@ let volumeOfLivingArea = volumeOfLiving(height, depth, width);
 function volumeOfHouse() {
     return volumeOfLivingArea + volumeOfRoof;
 }
-console.log(volumeOfHouse(volumeOfLivingArea, volumeOfRoof));
+
+console.log(`The traingle area is ${triangleArea()}`);
+console.log(`The roofVolume is ${rooftopvolume(depth, areaOfTrinagleCalculated)}`);
+console.log(`The living volume is ${volumeOfLiving(height, depth, width)}`);
+console.log(`The total volume is ${volumeOfHouse(volumeOfLivingArea, volumeOfRoof)}`);
+
 // This is a tested and sworking code 

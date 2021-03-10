@@ -1,0 +1,15 @@
+Quiz
+1. JavaScript is dynmically typed means 
+
+2.  Js is loosely typed 
+JavaScript is dynmically typed means their is we don't need explicit Datatype assinged to a variable unlike other programming languages like Java and C++. 
+Eg. let var1= 3; will automatically assing a numbr(integer) to the value of var1
+But in other languages like Java we need to type the type as int var1 = 3. 
+3. The 'null' and undefined datatypes in javascript 
+- The null value is assinged by a programmer to a no-known value(empty value)
+-Undefined is a value given by the compiler for variables unassigned 
+4. Falsey & Truthy 
+Flasey: 0, 0.00, false, "", undefined, null
+Truthy; Everything else 
+5. Use === 
+6. 

@@ -3,6 +3,8 @@
 exports.checkPrime = checkPrime;
 exports.areaOfCircle = areaOfCircle;
 exports.volumeOfaCylinder = volumeOfaCylinder;
+exports.greatestCommonDivisor = greatestCommonDivisor;
+exports.leastCommonMultiple = leastCommonMultiple;
 
 /**
  * 
@@ -42,3 +44,43 @@ function volumeOfaCylinder(r, h, volume) {
     
     return volume; 
 }        
+
+
+// now the triangle area 
+
+
+/**
+ * 
+ * @param {number} number1 
+ * @param {number} number2 
+ * @returns {number} 
+ */
+
+function greatestCommonDivisor(number1, number2) {
+    if (number2 === 0) {
+        return number1;
+    }
+    else {
+        return greatestCommonDivisor(number2, number1 % number2);
+    }
+}
+//greatestCommonDivisor(6, 24);
+/**
+ * 
+ *@param {number} number 1 is expected to be an integer 
+ *@param {number} number2 is also an integer
+ *@returns {number} This returns the least common multiple of two numbers 
+
+ */
+
+function leastCommonMultiple(number1, number2) {
+    let min = Math.min(number1, number2)
+    while (min >= 2) {
+        if (number1 % min === 0 && number2 % min === 0) {
+            return (number1 * number2) / min;
+
+        };
+        min--;
+    };
+    return (number1 * number2)
+}

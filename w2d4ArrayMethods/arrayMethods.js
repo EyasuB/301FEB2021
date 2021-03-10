@@ -15,8 +15,8 @@ arrayMethodTests.js, which is in the Resources > assignments > Mocha test files 
 */
 /**
  * 
- * @param {Array} arrayOne 
- * @param {Array} arrayTwo 
+ * @param {Array} arrayOne This is the first array to be compared 
+ * @param {Array} arrayTwo This is the second array that is compared for equality against the fitst array 
  * @returns {Boolean} Based on the comparison of the two arrays it returns true or false 
  */
 function isArrayEqual(arrayOne,arrayTwo){
@@ -39,12 +39,12 @@ reverse the array and then isArrayEqual method you wrote for 1.
 */
 /**
  * 
- * @param {Array} arrayOne 
- * @param {Array} reversedArray 
- * @returns {Boolean} returns with True or false 
+ * @param {Array} arrayOne This is the original array that we want to check if it is palindrome 
+ * @param {Array} reversedArray This is the reversed array of the first. 
+ * @returns {Boolean} returns True if the array is palindrome and false otherwise 
  */
 function isPalindrome(arrayOne) {
-    let movedArray = arrayOne.slice();
+    let movedArray = arrayOne.slice();// to copy the original reveresed array. 
     let arrayTwo = reversedArray(arrayOne);
     //console.log(arrayTwo, arrayOne, movedArray);
     if (movedArray.length !== arrayTwo.length) {
@@ -79,8 +79,8 @@ Output (String)
 */
 /**
  * 
- * @param {Array} myArray 
- * @returns {Array} 
+ * @param {Array} myArray This is the array that we want to transform
+ * @returns {Array} This is the array that we transformed using the _. 
  */
 
 function reverse2String(myArray) {
@@ -103,10 +103,9 @@ c. Third value is the last index of value found in the array or -1.
 */
 /**
  * 
- * @param {Array} arr 
- * @param {Object} val 
- * @returns {Boolean, Number, Number }
- */
+ * @param {Array} arr This is the array that contains elements 
+ * @param {Object} val This is the value that the arrray contains. It could be a number, a string, an object or other data type 
+ * @returns {Array} The returned an array with values boolean, the first index of the element if found and the last element of the array if found */
 function enhancedIncludes(arr, val) {
     let arr2 = [];
     let index1 = arr.indexOf(val);
@@ -129,7 +128,7 @@ function enhancedIncludes(arr, val) {
     }
    
 }
-console.log(enhancedIncludes([1, 2, 3, 4,5,6], 6));
+//console.log(enhancedIncludes([1, 2, 3, 4,5,6], 6));
 /*
 5. Write a function that returns reversed copy of a given array (original array should
 remain intact). Do this without using reverse method, instead use splice and slice
@@ -137,8 +136,8 @@ methods.
 */
 /**
  * 
- * @param {Array} originalarr
- * @returns {Array} reveresed array 
+ * @param {Array} originalarr This is the original array that we want to reverse with the methods 
+ * @returns {Array} reveresed array is the reversed array with the methods of splics and slice. 
  */
 function ssReverse(originalarr) {
     originalarr.slice();
@@ -156,6 +155,12 @@ shift and push array methods. Hint: Be careful about using a destructive operati
 on an array that is being iterated over. The array and its indices will be changed between
 iterations
 */
+/**
+ * 
+ * @param {Array} arr1 The first unsorted array that we need to merge 
+ * @param {Array} arr2 The second unsorted array that we need to merge
+ * @returns {Array} Merged and sorted array 
+ */
 function mergeTwo(arr1, arr2) {
     arr1 = arr1.sort();
     arr2 = arr2.sort();

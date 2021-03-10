@@ -58,7 +58,7 @@ describe("rotateRight", function () {
 describe("rotateNRight", function () {
 
     it("tests rotateNRight 3", function () {
-        assert.deepStrictEqual(arrays.rotateNRight([-1, -100, 1, 2, 3, -55], 3), [2, 3, -55, -1, -100, 1, 2]);
+        assert.deepStrictEqual(arrays.rotateNRight([-1, -100, 1, 2, 3, -55], 3), [2, 3, -55, -1, -100, 1]);
     });
     it("tests rotateNRight 4", function () {
         assert.deepStrictEqual(arrays.rotateNRight([-10, 2, 3, 4, 20], 4), [2, 3, 4, 20, -10]);
@@ -80,14 +80,14 @@ describe("filter map reduce string", function () {
 /* 7.	Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array. */
 describe("filterRange", function () {
     it("tests [0, 100, 3, 6, -555], 6, 60",  function () {
-        assert.strictDeepEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 60), [100, 6]);
+        assert.deepStrictEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 160), [100, 6]);
     });
 });
 
 /* 8.	Write a function that takes an array of strings and returns array of palindrome strings only. */
 describe("filterPalindromes", function () {
     it("tests [not, a, kayak, eagle, racecar]",   function () {
-        assert.strictDeepEqual(arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]), [ "a", "kayak", "racecar"]);
+        assert.deepStrictEqual(arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]), [ "a", "kayak", "racecar"]);
     });
 });
 

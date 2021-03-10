@@ -1,4 +1,5 @@
 'use strict'
+
 const prompt = require('prompt-sync')();
 /*
 A prime number (or a prime) is a natural number greater than 1 that is not a product of two
@@ -26,7 +27,7 @@ for (let i = 2; i < number; i++){
 let isPrime = numbfactor === 0;
 console.log(isPrime, "number of Factor: ", numbfactor);
 //uing while Loop with break
-let number2 = prompt("Enter the number please: ");
+let number = prompt("Enter the number please: ");
 let isPrime2 = false;
 let i = 2;
 while (isPrime2 ===true) {
@@ -92,6 +93,13 @@ being positive integer from user input.
 The Fibonacci series is a sequence such that each number is the sum of the two preceding ones,
 starting from 0 and 1. That is, fib(0) = 0, fib(1) = 1, fib(n) = fib(n – 1) + fib(n – 2) for n > 1.
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …
+/*
+Defining Table 
+Input: Number 
+Output: fib Sequence 
+Process: for n>=2, fib=fibprivious +fivprevious
+
+*/
 */
 let numb = prompt("Enter the number");
 let num1 = 1;
@@ -112,8 +120,13 @@ input      output
 8           8
 */
 let givenNum = prompt("Enter the number: ");
+let sum = 0;
 
-
+while (givenNum) {
+    sum += givenNum % 10;
+    givenNum = Math.floor(value / 10);
+}
+console.log(sum);
 
 
 for (let i = 1; i < 5; i++){
@@ -121,3 +134,50 @@ for (let i = 1; i < 5; i++){
         console.log(j);
     }
 }
+
+
+for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j=1; j<= i; j++) {
+        row += i +'& ' + " ";
+    }
+    console.log(row);
+}
+for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 1; j<= i; j++) {
+        row += j +'& ' + " ";
+    }
+    console.log(row);
+}
+for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 5; j>= i; j--) {
+        row += i +'& ' + " ";
+    }
+    console.log(row);
+}
+
+
+// Perfect number 
+// Def Table 
+/*
+- Input a number 
+    - Output true or false 
+Procees 
+    - Intial a sum to 1 cause 1 always to sum
+    - Loop to 1
+    - If the num % i === 0 then add to sum 
+    - print sum; 
+
+    */
+
+
+
+    // Add the digits 
+//current digit = number % 10;
+//Quotiont = floor(number / 10);
+
+
+
+
