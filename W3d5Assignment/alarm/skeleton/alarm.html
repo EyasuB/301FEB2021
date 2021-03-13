@@ -7,16 +7,18 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 
 	<title>Alarm</title>
-	<link href="./alarm.css" type="text/css" rel="stylesheet">
+	<link href="alarm.css" type="text/css" rel="stylesheet">
+	<script src="alarm.js" type ="text/javascript"></script>
 </head>
 
 
 <body>
-	<h1>
+	<div id="colored">
+	<h1 id ="colored">
 		<img id="logo" src="./timer.gif" width="150px" height="150px" alt="UW CSE logo">
 		Timer Alarm
 	</h1>
-
+</div>
 	<div>
 		<input id="min" type="text"> min
 	</div>
@@ -26,9 +28,8 @@
 	</div>
 
 	<div>
-		<button id="go">Go</button>
+		<button id="go" onclick="alarm()">Go</button>
 	</div>
-
 
 </body>
 
